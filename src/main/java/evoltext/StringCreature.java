@@ -19,7 +19,7 @@ public class StringCreature implements Cloneable, Comparator
   private int rating = 0;
 
   public StringCreature() {
-    str = new StringBuffer("Z");
+    str = new StringBuffer("" + (char) ('A' + (int)(Math.random()* ('z'-'A'))) );
   }
 
   public StringBuffer getStr( )
@@ -106,7 +106,7 @@ public class StringCreature implements Cloneable, Comparator
   
   public String toString()
   {
-  return str.toString() + '(' + rating + ')';
+  return str.toString() + " (" + rating + ')';
   }
   
   
